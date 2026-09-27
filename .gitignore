@@ -1,0 +1,62 @@
+# Compiled binaries. This is a single main package, so a build produces
+# `trending-pkgs`; the cross-compiles are named trending-pkgs-<arch>. An 8.6MB
+# aarch64 binary was staged here before .gitignore existed.
+/trending-pkgs
+/trending-pkgs-*
+*.exe
+*.test
+*.out
+
+# Data files written by a run, as opposed to the inputs committed alongside.
+# popularities.txt is the per-package series cache; trending.txt is the scored
+# output. Both were committed here once before .gitignore existed.
+/popularities.txt
+/trending.txt
+/non_dependency_packages.txt
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+target/
+build/
+dist/
+*.egg-info/
+Cargo.lock
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+credentials
+secrets.*
+*.key
+*.pem
+*.cert
+*.p12
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup dirs
+*.bak/
+*.old/
+*.bak.*/
